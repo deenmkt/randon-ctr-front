@@ -1,0 +1,6 @@
+npm install --save gulp gulp-autoprefixer gulp-rename gulp-cssmin gulp-watch gulp-image-optimization gulp-concat gulp-uglifyjs
+npm install --save-dev browser-sync gulp-notify gulp-sass bs-html-injector
+
+rodar o gulp com "gulp watch" 
+trocar o diretorio no gulpfile.js
+npm install gulp@3.9.1 --save-dev

@@ -1,0 +1,229 @@
+/*  Opacity
+    ========================================================================== */
+    @mixin opacity($value) {
+      $ie: $value * 100;
+      filter: alpha(opacity=$ie);
+      opacity: $value;
+    }
+
+/*  Clearfix
+    ========================================================================== */
+    @mixin cf {
+      *zoom: 1;
+      &:before, &:after {
+        content: "";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+    }
+
+/*  Absolute center
+    ========================================================================== */
+    @mixin absolute-center($top: 0, $right: 0, $bottom: 0, $left: 0) {
+      position: absolute;
+      @if $top != none {
+        top: $top;
+      }
+      @if $right != none {
+        right: $right;
+      }
+      @if $bottom != none {
+        bottom: $bottom;
+      }
+      @if $left != none {
+        left: $left;
+      }
+      margin: auto;
+    }
+
+
+/*  Border radius
+    ========================================================================== */
+
+    @mixin border-top-radius($foo) {
+      border-top-left-radius: $foo;
+      border-top-right-radius: $foo;
+    }
+
+    @mixin border-bottom-radius($foo) {
+      border-bottom-left-radius: $foo;
+      border-bottom-right-radius: $foo;
+    }
+
+    @mixin border-left-radius($foo) {
+      border-top-left-radius: $foo;
+      border-bottom-left-radius: $foo;
+    }
+
+    @mixin border-right-radius($foo) {
+      border-top-right-radius: $foo;
+      border-bottom-right-radius: $foo;
+    }
+
+/*  Font-face
+    ========================================================================== */
+    @mixin font-face($name, $font-files, $weight: false, $style: false) {
+      @font-face {
+        font-family: $name;
+        src: url($font-files + ".eot");
+        src: url($font-files + ".eot?#iefix") format('embedded-opentype'),
+             url($font-files + ".woff") format('woff'),
+             url($font-files + ".ttf") format('truetype'),
+             url($font-files + ".svg#" + $name) format('svg');
+        @if $weight {
+          font-weight: $weight;
+        }
+        @if $style {
+          font-style: $style;
+        }
+      }
+    }
+
+/*  Transition
+    ========================================================================== */
+   @mixin transition($duration:0.8s,$type:'ease',$delay:0){
+      @if $type == 'ease' {
+        transition: all $duration ease;
+        transition-delay: $delay; 
+      }@else{
+        transition: all $duration cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        transition-delay: $delay;  
+      }
+    }
+    @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+      @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+      } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+      }
+    }
+
+/*  Animation
+    ========================================================================== */
+    @mixin animation($parameters...) {
+        -webkit-animation: $parameters;
+                animation: $parameters;
+    }
+
+    /*  Keyframes
+        ========================================================================== */
+        @mixin keyframes($name) {
+            @-webkit-keyframes #{$name} {
+                @content;
+            }
+
+            @keyframes #{$name} {
+                @content;
+            }
+        }
+
+/*  Columns
+    ========================================================================== */
+    @mixin column($count, $gap, $line:'') {
+        -webkit-column-count: $count;
+           -moz-column-count: $count;
+                column-count: $count;
+
+        -webkit-column-gap: $gap;
+           -moz-column-gap: $gap;
+                column-gap: $gap;
+
+        @if $line != '' {
+        -webkit-column-rule: $line;
+           -moz-column-rule: $line;
+                column-rule: $line;
+        }
+    }
+
+/*  Transform
+    ========================================================================== */
+
+    /*  Default
+        ========================================================================== */
+        @mixin transform($parameters) {
+            -webkit-transform: $parameters;
+                -ms-transform: $parameters;
+                    transform: $parameters;
+        }
+
+    /*  Translate
+        ========================================================================== */
+        @mixin translate($valueX, $valueY: 0) {
+            -webkit-transform: translate($valueX, $valueY);
+                -ms-transform: translate($valueX, $valueY);
+                    transform: translate($valueX, $valueY);
+        }
+
+    /*  Skew
+        ========================================================================== */
+        @mixin skew($valueX, $valueY) {
+            -webkit-transform: skewX($valueX) skewY($valueY);
+                -ms-transform: skewX($valueX) skewY($valueY);
+                    transform: skewX($valueX) skewY($valueY);
+        }
+
+    /*  Scale
+        ========================================================================== */
+        @mixin scale($value) {
+            -webkit-transform: scale($value);
+                -ms-transform: scale($value);
+                    transform: scale($value);
+        }
+
+    /*  Rotate
+        ========================================================================== */
+        @mixin rotate($value) {
+            -webkit-transform: rotate($value);
+                -ms-transform: rotate($value);
+                    transform: rotate($value);
+        }
+
+    /*  Transform origin
+        ========================================================================== */
+        @mixin origin($valueX, $valueY) {
+            -webkit-transform-origin: $valueX $valueY;
+                -ms-transform-origin: $valueX $valueY;
+                    transform-origin: $valueX $valueY;
+        }
+
+/*  Gradients
+    ========================================================================== */
+
+    /*  Vertical gradient
+        ========================================================================== */
+        @mixin simple-vertical-gradient($startColor, $endColor) {
+            background-color: $startColor;
+            background: -webkit-linear-gradient(top, $startColor, $endColor);
+            background:         linear-gradient(to bottom, $startColor, $endColor);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$startColor}', EndColorStr='#{$endColor}');
+        }
+
+        @mixin vertical-gradient($bgColor, $colors...) {
+            background: -webkit-linear-gradient(top, $colors) $bgColor;
+            background:         linear-gradient(to bottom, $colors) $bgColor;
+        }
+
+    /*  Horizontal Gradient
+        ========================================================================== */
+        @mixin simple-horizontal-gradient($startColor, $endColor) {
+            background-color: $startColor;
+            background: -webkit-linear-gradient(left, $startColor, $endColor);
+            background:         linear-gradient(to right, $startColor, $endColor);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$startColor}', EndColorStr='#{$endColor}');
+        }
+
+        @mixin horizontal-gradient($bgColor, $colors...) {
+            background: -webkit-linear-gradient(left, $colors) $bgColor;
+            background:         linear-gradient(to right, $colors) $bgColor;
+        }
+
+        @mixin filter($properties) {
+          // Your vendor prefixing stuff here, I am using Bourbon:
+          @include prefixer(filter, $properties, webkit moz spec);
+        }
