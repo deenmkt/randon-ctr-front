@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="13px" viewBox="0 0 24 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>seta-dir</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Notícias---Detalhes" transform="translate(-1124.000000, -1319.000000)">
+            <g id="setas" transform="translate(274.000000, 1296.000000)">
+                <g transform="translate(834.000000, 0.000000)" id="seta-dir">
+                    <g transform="translate(18.000000, 23.000000)">
+                        <path d="M11,3.04041829 C11,1.9321664 11.6353567,1.66910746 12.4122671,2.4460178 L19.7445872,9.77833792 C20.5245607,10.5583115 20.2555012,11.190605 19.1501867,11.190605 L13.0066676,11.190605 C11.8984157,11.190605 11,10.2892519 11,9.18393743 L11,3.04041829 Z" id="Rectangle-6" fill="#FFFFFF" transform="translate(15.595566, 6.595302) rotate(-135.000000) translate(-15.595566, -6.595302) "></path>
+                        <path d="M0.357864376,6.5 L14.5,6.5" id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

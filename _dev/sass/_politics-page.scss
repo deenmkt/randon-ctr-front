@@ -1,0 +1,447 @@
+.chamada_politica{
+  padding:10rem 4rem;
+  background-size: cover !important;
+  background-position: center;
+  .content{
+    .title{
+      font-family: EurostileLTStd-Bold;
+      font-size: 45px;
+      line-height: 45px;
+      color: #FFFFFF;
+      text-align: left;
+      max-width: 305px;
+      margin-bottom: 15px;
+    }
+    .desc{
+      font-family: proxima-nova;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 30px;
+      color: #FFFFFF;
+      text-align: left;
+      max-width: 430px;
+    }
+    .btnWrapper{
+      margin-top: 20px;
+      text-align: left;
+    }
+  }
+}
+#politics{
+  .principle{
+    &__container{
+      &::before{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #fff;
+        content: '';
+        position: absolute;
+      }
+      background-color: #EAEEF1;
+      position: relative;
+      padding: 0 5rem 5rem;
+      display: flex;
+      .left{
+        width: 100%;
+        z-index: 1;
+        .box{
+          background: #002A68;
+          box-shadow: 40px 52px 54px rgba(59, 59, 59, 0.481856);
+          font-family: EurostileLTStd-Bold;
+          font-size: 45px;
+          line-height: 45px;
+          color: #FFFFFF;
+          max-width: 520px;
+          height: 285px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-transform: uppercase;
+          text-align: left;
+          margin-bottom: 85px;
+          .inner{
+            max-width: 80%;
+          }
+          .line{
+            width: 40px;
+            border-top: solid 4px #009CDD;
+            margin-bottom: 35px;
+            margin-left: 0;
+          }
+        }
+        .line{
+          margin-left: 8rem;
+          width: 40px;
+          border-top: solid 4px #009CDD;
+          margin-bottom: 35px;
+        }
+        .left-title{
+        font-family: EurostileLTStd-Bold; 
+        font-size: 45px;
+        line-height: 45px;
+        color: #009CDD;
+        text-align: left;
+        max-width: 90%;
+        padding-left: 8rem;
+          strong{
+            color: #002A68;
+          }
+        }
+      }
+      .right{
+        width: 100%;
+        align-self: flex-end;
+        padding: 2rem 0 2rem 15rem;
+        .right-title{
+          font-family: EurostileLTStd-Bold;   
+          margin-bottom: 20px;
+          font-size: 25px;
+          line-height: 37px;
+          letter-spacing: -1px;
+          color: #002A68;
+          text-align: left;
+        }
+        .right-list{
+          padding-left: 0;
+          ul li{
+            font-family: proxima-nova;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 36px;
+            color: #4A4A4A;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            padding-left: 25px;
+            &::before{
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-60%);
+              background-image: url(../../_assets/images/arrow_list.png);
+              background-repeat: no-repeat;
+              height: 15px;
+              width: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .values{
+    &__container{
+      display: flex;
+      align-items: stretch;
+      .item:nth-child(2){
+        background-color: #F8FBFD;
+      }
+      .item{
+        width: 100%;
+        padding: 5rem 5rem 5rem 8rem;
+        .title{
+          font-family: EurostileLTStd-Bold;
+          font-size: 25px;
+          line-height: 37px;
+          letter-spacing: -1px;
+          color: #002A68;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          text-align:left;
+          position: relative;
+          &::before{
+            content: '';
+            width: 95px;
+            border-top:2px solid #009CDD;
+            position: absolute;
+            left: -8rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .desc{
+          font-family: proxima-nova;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 25px;
+          color: #4A4A4A;
+          text-align:left;
+        }
+      }
+    }
+  }
+  .system{
+    &__container{
+      position: relative;
+      padding-top: 130px;
+      background-color: #EAEEF1;
+      .title{
+        font-family: EurostileLTStd-Bold;
+        font-size: 45px;
+        line-height: 45px;
+        text-align: center;
+        color: #002A68;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        top: 130px;
+      }
+      .destaque{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        top: 130px;
+        font-family: EurostileLTStd-Bold;
+        font-size: 100px;
+        line-height: 94%;
+        text-align: center;
+        -webkit-text-stroke: 2px #fff;
+        -webkit-text-fill-color: transparent;
+        width: 90%;
+      }
+      .desc{
+        margin: 120px auto 50px;
+        font-family: proxima-nova;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;   
+        text-align: center;
+        color: #4A4A4A;
+        max-width: 775px;
+      }
+      .accordion{
+        max-width: 1125px;
+        margin: auto;
+        padding-bottom: 150px;
+        width: 90%;
+        .list{
+          .item{
+            padding: 3rem;
+            background: #FFFFFF;
+            box-shadow: 30px 42px 34px rgba(0, 0, 0, 0.0946558);
+            border-left: 3px solid #009CDD;
+            margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+            .js-minus{
+              opacity: 0;
+              z-index: -1;
+              top: 55px !important;
+              right: 55px !important;
+            }
+            .icon{
+              transition: 0.3s all ease;
+              pointer-events: none;
+              position: absolute;
+              top: 40px;
+              right: 50px;
+            }
+            .question{              
+              font-family: proxima-nova;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 25px;   
+              display: flex;
+              align-items: center;
+              color: #002A68;
+              text-align: left;
+              margin-right: 15%;
+            }
+            .answer{
+              font-family: proxima-nova;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 15px;
+              line-height: 25px; 
+              color: #4A4A4A;
+              max-width: 80%;
+              margin-left: 4rem;
+              padding-left: 4rem;
+              position: relative;
+              text-align:left;
+              max-height: 0;
+              overflow: 0;
+              opacity: 0;
+              margin-top: 0;
+              transition: 0.3s all ease;
+              &::before{
+                height: 100%;
+                left: 0;
+                top: 0;
+                content: '';
+                position: absolute;
+                border-left:1px solid #009CDD;
+              }
+            }
+            &.active{
+              .js-minus{
+                opacity: 1;
+                z-index: 1;
+                pointer-events: all;
+              }
+              .js-plus{
+                opacity: 0;
+                z-index: -1;
+              }
+              .answer{
+                margin-top: 35px;
+                opacity: 1;
+                max-height: 999px;
+              }
+            }
+          }
+        }
+        .revised{
+          color: #4A4A4A;
+          font-family: proxima-nova;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 36px;
+          margin-bottom: 30px;
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1200px){
+  #politics {
+    .principle{
+      &__container {
+        .right {
+          padding: 2rem 0 2rem 5rem;
+        }
+      }
+    }
+    .values{
+      &__container {
+        .item{
+          padding: 3rem;
+          overflow: hidden;
+         .title{
+            &::before{
+              left: -7rem;
+            }
+          }
+        }
+      }
+    }
+    .system{
+      &__container {
+        .destaque {
+          font-size: 8vw;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:991px){
+  #politics {
+    .principle{
+      &__container {
+        flex-direction: column;
+        .left {
+          .line{
+            margin-left: 0;
+          }
+          .left-title{
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    .values{
+      &__container {
+        flex-direction: column;
+        .item{
+         .desc{
+           max-width: 70%;
+         }
+        }
+      }
+    }
+    .system{
+      &__container {
+        .destaque {
+          font-size: 8vw;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:479px){
+  .chamada_politica{
+    padding: 5rem 1rem;
+    .content{
+      .title{
+        font-size: 31px;
+        line-height: 120%;
+      }
+    }
+  }
+  #politics {
+    .principle{
+      &__container {
+        padding: 2rem;
+        .left {
+          .box{
+            font-size: 31px;
+            line-height: 36px;
+            height: 235px;
+          }
+          .left-title{
+            font-size: 31px;
+            line-height: 36px;
+          }
+        }
+      }
+    }
+    .system{
+      &__container {
+        padding: 130px 1rem 1rem;
+        .title {
+          font-size: 31px;
+          line-height: 35px;
+          width: 90%;
+        }
+        .accordion {
+          width: 95%;
+          .list {
+            .item {
+              padding: 1rem;
+              .question{
+                font-size: 16px;
+                line-height: 21px;
+              }
+              .answer{
+                font-size: 14px;
+                line-height: 20px;
+                margin-left: 0rem !important; 
+                padding-left: 2rem !important;
+              }
+              .icon{
+                top: 30px!important;
+                right: 22px!important;
+              }
+            }
+          }
+          .logos{
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
